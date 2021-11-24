@@ -19,6 +19,8 @@ public class CuentaRepositorio {
     public boolean crearNuevaCuenta(Cuenta cuenta){
         try {
             Integer usuarioId = restTemplate.getForObject("http://localhost:8080/usuarios/enviarid", Integer.class);
+            cuenta.setIdUsuario(usuarioId);
+            cuentaRepositorioDAO.save(cuenta);
             return true;
         }catch (Exception e){
             return false;
