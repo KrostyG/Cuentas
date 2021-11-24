@@ -11,10 +11,9 @@ public class Cuenta {
     private Integer idUsuario;
     private String tipoCuenta;
     private String monedaCuenta;
-    private double saldo;
+    private Double saldo;
 
-    public Cuenta(Integer idCuenta, String tipoCuenta, String monedaCuenta, Integer idUsuario, double saldo) {
-        this.idCuenta = idCuenta;
+    public Cuenta(String tipoCuenta, String monedaCuenta, Integer idUsuario, Double saldo) {
         this.tipoCuenta = tipoCuenta;
         this.monedaCuenta = monedaCuenta;
         this.idUsuario = idUsuario;
@@ -24,7 +23,7 @@ public class Cuenta {
     public Cuenta() {
     }
 
-    public double getSaldo() {
+    public Double getSaldo() {
         return saldo;
     }
 
