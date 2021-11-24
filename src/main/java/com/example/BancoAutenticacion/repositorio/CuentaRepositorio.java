@@ -1,10 +1,13 @@
 package com.example.BancoAutenticacion.repositorio;
 
 import com.example.BancoAutenticacion.Entidad.Cuenta;
+
 import com.example.BancoAutenticacion.Entidad.Usuario;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.web.client.RestTemplate;
+
+import java.util.List;
 
 @Repository
 public class CuentaRepositorio {
@@ -21,4 +24,6 @@ public class CuentaRepositorio {
             return false;
         }
     }
+
+    public List<Cuenta> cuentaList(){return (List<Cuenta>)cuentaRepositorioDAO.findAll();}
 }
