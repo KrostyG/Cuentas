@@ -18,7 +18,7 @@ public class CuentaRepositorio {
 
     public boolean crearNuevaCuenta(Cuenta cuenta){
         try {
-            Integer usuarioId = restTemplate.getForObject("http://localhost:8080/usuarios/enviarid", Integer.class);
+            Integer usuarioId = restTemplate.getForObject("https://banco-demo-equipod-nttdata.herokuapp.com/usuarios/enviarid", Integer.class);
             cuenta.setIdUsuario(usuarioId);
             cuentaRepositorioDAO.save(cuenta);
             return true;
